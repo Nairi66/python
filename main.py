@@ -1,15 +1,13 @@
 import telebot, requests 
 from telebot import apihelper
-import os
-import time
-import logging                                                                                                                                          
+import os, time, logging, config                                                                                                                                          
 
 logger = telebot.logger
 telebot.logger.setLevel(logging.DEBUG)
 
 TG_PROXY = 'https://103.241.156.250:8080'
 apihelper.proxy = {'http': TG_PROXY}
-bot = telebot.TeleBot("1292521216:AAFG73G8bmWVEsSVM8JRqEyGNuZsfz23Cig")
+bot = telebot.TeleBot("config.token")
 
 bot = telebot.TeleBot("1292521216:AAFG73G8bmWVEsSVM8JRqEyGNuZsfz23Cig")
 @bot.message_handler(commands=['start'])
